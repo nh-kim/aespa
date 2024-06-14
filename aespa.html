@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 웹사이트</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: '맑은 고딕', sans-serif;
+        }
+        nav {
+           background-color: #000;
+           padding: 10px;
+       }
+       nav a {
+           color: white;
+           text-decoration: none;
+           padding: 5px 10px;
+           margin-right: 5px;
+       }
+       nav a:hover {
+           color: black;
+           background-color: white;
+           border-radius: 15px;
+       }
+       .active {
+           color: black;
+           background-color: #FFF;
+           border-radius: 15px;
+       }        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      .active { color: Black; background-color: #FFF; border-radius: 15px; }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1200px;
+            height: 780px;
+        }
+        .image-container {
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            right: 100px;
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            transition: border-radius 0.3s ease;
+        }
+        .image-container a:hover img {
+            border-radius: 50%;
+        }
+        .text-container {
+            flex-grow: 1;
+            max-width: 500px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .lyrics-container {
+            width: 700px;
+            height: 500px;
+            overflow-y: scroll;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-right: 20px;
+            margin-left: -100px; /* 더 왼쪽으로 이동 */
+        }
+        .lyrics-container::-webkit-scrollbar {
+            display: none;
+        }
+        .description span, .album-description p {
+            font-size: 16px;
+            line-height: 2; /* 행간 조정 */
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        .description span {
+            display: block;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: calc(var(--order) * 0.2s);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .option {
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .album-description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            z-index: 1;
+            transition: transform 0.3s ease;
+            transform: translateY(-100%);
+        }
+        .album-description.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+          <nav>
+       <a href="all.html" class="active">all</a>
+        <a href="Newjins.html">Newjins</a>
+        <a href="Aespa.html">Aespa</a>
+        <a href="Ive.html">Ive</a>
+        <a href="Ateez.html">Ateez</a>
+        <a href="Tws.html">Tws</a>
+    </nav>
+    <div class="album-description">
+        <p>에스파 - 슈퍼노바</p>
+        <p>2024년 5월 13일, 발매된 aespa의 정규 1집 “Armageddon”의 선공개 싱글이자 더블 타이틀곡이다.</p>
+        <p>‘Supernova’는 무게감 있는 킥과 베이스 기반의 미니멀한 트랙 사운드가 인상적인 댄스곡으로, 캐치한 탑라인과 신스 멜로디가 매력적이며, 가사는 다른 차원의 문이 열리는 사건의 시작을 초신성에 빗대어 aespa 세계관 시즌 2의 본격적인 스토리텔링을 예고, 내 안의 대폭발이 시작되었음을 aespa만의 힙한 무드로 표현했다.</p>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="lyrics-container">
+                <div class="title">Supernova</div>
+                <div class="subtitle">에스파</div>
+                <div class="description">
+                    <span style="--order: 1;">I’m like some kind of Supernova
+                        Watch out</span>
+                    <span style="--order: 2;">Look at me go</span>
+                    <span style="--order: 3;">재미 좀 볼</span>
+                    <span style="--order: 4;">빛의 Core</span>
+                    <span style="--order: 5;">So hot hot</span>
+                    <span style="--order: 6;">문이 열려</span>
+                    <span style="--order: 7;">서로의 존재를 느껴</span>
+                    <span style="--order: 8;">마치 Discord</span>
+                    <span style="--order: 9;">날 닮은 너 너 누구야</span>
+                    <span style="--order: 10;">(Drop)</span>
+                    <span style="--order: 11;">사건은 다가와 Ah Oh Ay</span>
+                    <span style="--order: 12;">거세게 커져가 Ah Oh Ay</span>
+                    <span style="--order: 13;">That tick that tick tick bomb</span>
+                    <span style="--order: 14;">That tick that tick tick bomb</span>
+                    <span style="--order: 15;">감히 건드리지 못할 걸</span>
+                    <span style="--order: 16;">(누구도 말이야)</span>
+                    <span style="--order: 17;">지금 내 안에선</span>
+                    <span style="--order: 18;">Su su su Supernova</span>
+                    <span style="--order: 19;">Nova</span>
+                    <span style="--order: 20;">Can’t stop hyperstellar</span>
+                    <span style="--order: 21;">원초 그걸 찾아</span>
+                    <span style="--order: 22;">Bring the light of a dying star</span>
+                    <span style="--order: 23;">불러낸 내 우주를 봐 봐</span>
+                    <span style="--order: 24;">Supernova</span>
+                    <span style="--order: 25;">Make it feel too right</span>
+                    <span style="--order: 26;">휩쓸린 에너지 It’s so special</span>
+                    <span style="--order: 27;">잔인한 Queen 이며 Scene 이자 종결</span>
+                    <span style="--order: 28;">이토록 거대한 내 안의 Explosion</span>
+                    <span style="--order: 29;">내 모든 세포 별로부터 만들어져</span>
+                    <span style="--order: 30;">(Under my control Ah)</span>
+                    <span style="--order: 31;">질문은 계속돼 Ah Oh Ay</span>
+                    <span style="--order: 32;">우린 어디서 왔나 Oh Ay</span>
+                    <span style="--order: 33;">느껴 내 안에선</span>
+                    <span style="--order: 34;">Su su su Supernova</span>
+                    <span style="--order: 35;">Nova</span>
+                    <span style="--order: 36;">Can’t stop hyperstellar</span>
+                    <span style="--order: 37;">원초 그걸 찾아</span>
+                    <span style="--order: 38;">Bring the light of a dying star</span>
+                    <span style="--order: 39;">불러낸 내 우주를 봐 봐</span>
+                    <span style="--order: 40;">Supernova</span>
+                    <span style="--order: 41;">보이지 않는 힘으로</span>
+                    <span style="--order: 42;">네게 손 내밀어 볼까</span>
+                    <span style="--order: 43;">가능한 모든 가능성</span>
+                    <span style="--order: 45;">무한 속의 너를 만나</span>
+                    <span style="--order: 46;">It’s about to bang bang</span>
+                    <span style="--order: 47;">Don’t forget my name</span>
+                    <span style="--order: 48;">Su su su Supernova</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <a href="https://youtu.be/phuiiNCxRMg?si=mIRYaW1Z9hiscSLD" target="_blank">
+                    <img src="https://i.imgur.com/btavuHM.jpeg" alt="이미지">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const albumDescription = document.querySelector('.album-description');
+        const container = document.querySelector('.container');
+
+        container.addEventListener('click', () => {
+            albumDescription.classList.toggle('show');
+        });
+
+        container.addEventListener('scroll', () => {
+            albumDescription.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
